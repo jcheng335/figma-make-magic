@@ -35,10 +35,10 @@ const Index = () => {
       <AnimatedBackground />
       
       {/* Navigation */}
-      <nav className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-500 ${
+      <nav className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-700 ease-out ${
         scrolled 
-          ? "bg-background/60 backdrop-blur-xl shadow-[0_1px_0_0_hsl(var(--border)/0.3)]" 
-          : "bg-transparent"
+          ? "bg-background/50 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.2)]" 
+          : "bg-transparent backdrop-blur-none"
       }`}>
         <div className="flex items-center gap-2">
           <BookMarked className="w-6 h-6 text-primary" />
