@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blob: {
+          1: "hsl(var(--blob-1))",
+          2: "hsl(var(--blob-2))",
+          3: "hsl(var(--blob-3))",
+          4: "hsl(var(--blob-4))",
+          5: "hsl(var(--blob-5))",
+          6: "hsl(var(--blob-6))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
