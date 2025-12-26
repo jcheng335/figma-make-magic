@@ -43,20 +43,37 @@ const Index = () => {
 
       {/* Hero Section */}
       <motion.section 
-        className="relative z-10 flex flex-col items-center justify-center min-h-[85vh] px-4 text-center"
+        className="relative z-10 flex flex-col items-center justify-center min-h-[85vh] px-4 text-center overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
       >
+        {/* Top bar wash (subtle fade to white like reference) */}
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-28"
+          style={{
+            background: "linear-gradient(to bottom, hsl(var(--background)), transparent)",
+          }}
+        />
+
+        {/* Bottom fade (starts under buttons and tapers to white) */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-[32vh]"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.02) 10%, hsl(var(--background) / 0.06) 25%, hsl(var(--background) / 0.14) 40%, hsl(var(--background) / 0.28) 55%, hsl(var(--background) / 0.48) 70%, hsl(var(--background) / 0.72) 85%, hsl(var(--background)) 100%)",
+          }}
+        />
+
         <motion.p 
-          className="text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4"
+          className="relative z-10 text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4"
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
         >
           Modern Workspace
         </motion.p>
         <motion.h1 
-          className="text-6xl md:text-8xl font-light tracking-tight text-foreground mb-6" 
+          className="relative z-10 text-6xl md:text-8xl font-light tracking-tight text-foreground mb-6" 
           style={{ fontFamily: 'Georgia, serif' }}
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -64,7 +81,7 @@ const Index = () => {
           ZoeNote
         </motion.h1>
         <motion.p 
-          className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="relative z-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
@@ -72,7 +89,7 @@ const Index = () => {
           Capture your thoughts, organize your ideas, and bring your projects to life.
         </motion.p>
         <motion.div 
-          className="flex gap-4"
+          className="relative z-10 flex gap-4"
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
@@ -80,14 +97,6 @@ const Index = () => {
           <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm">Learn More</Button>
         </motion.div>
       </motion.section>
-
-      {/* Gradient fade-out overlay - starts after buttons, very gradual */}
-      <div 
-        className="absolute left-0 right-0 top-[80vh] h-[120vh] z-[5] pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.01) 5%, hsl(var(--background) / 0.02) 10%, hsl(var(--background) / 0.04) 15%, hsl(var(--background) / 0.06) 20%, hsl(var(--background) / 0.09) 25%, hsl(var(--background) / 0.13) 30%, hsl(var(--background) / 0.18) 35%, hsl(var(--background) / 0.24) 40%, hsl(var(--background) / 0.32) 45%, hsl(var(--background) / 0.42) 50%, hsl(var(--background) / 0.54) 55%, hsl(var(--background) / 0.66) 60%, hsl(var(--background) / 0.78) 65%, hsl(var(--background) / 0.88) 70%, hsl(var(--background) / 0.95) 75%, hsl(var(--background)) 80%)'
-        }}
-      />
       
       {/* Clean white background for rest of page */}
       <div className="relative bg-background z-10">
