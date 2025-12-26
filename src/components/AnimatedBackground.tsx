@@ -1,6 +1,6 @@
 const AnimatedBackground = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div className="fixed inset-x-0 top-16 bottom-0 overflow-hidden pointer-events-none -z-10">
       {/* Base gradient layer */}
       <div className="absolute inset-0 bg-background" />
       
