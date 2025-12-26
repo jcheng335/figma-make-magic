@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
 import { BookOpen, Pen, Sparkles, RefreshCw, BookMarked, Search, Mic, ScanLine } from "lucide-react";
@@ -19,12 +20,26 @@ const staggerContainer = {
 };
 
 const Index = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
       
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-6 md:px-12 py-4">
+      <nav className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-300 ${
+        scrolled 
+          ? "bg-background/70 backdrop-blur-xl border-b border-border/50 shadow-sm" 
+          : "bg-transparent"
+      }`}>
         <div className="flex items-center gap-2">
           <BookMarked className="w-6 h-6 text-primary" />
           <span className="font-semibold text-lg">ZoeNote</span>
