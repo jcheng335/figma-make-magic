@@ -48,11 +48,11 @@ const Index = () => {
         animate="visible"
         variants={staggerContainer}
       >
-        {/* Top bar wash - thick white fade from top */}
+        {/* Top bar wash (subtle fade to white like reference) */}
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-48"
+          className="pointer-events-none absolute inset-x-0 top-0 h-28"
           style={{
-            background: "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background)) 30%, hsl(var(--background) / 0.85) 50%, hsl(var(--background) / 0.5) 70%, transparent 100%)",
+            background: "linear-gradient(to bottom, hsl(var(--background)), transparent)",
           }}
         />
 
