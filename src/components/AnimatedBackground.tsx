@@ -1,8 +1,16 @@
 const AnimatedBackground = () => {
   return (
-    <div className="fixed inset-x-0 top-16 bottom-0 overflow-hidden pointer-events-none -z-10">
+    <div className="fixed inset-x-0 top-0 bottom-0 overflow-hidden pointer-events-none -z-10">
       {/* Base gradient layer */}
       <div className="absolute inset-0 bg-background" />
+      
+      {/* Top fade overlay - smooth transition from white */}
+      <div 
+        className="absolute inset-x-0 top-0 h-32 z-10"
+        style={{
+          background: "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background)) 40%, transparent 100%)",
+        }}
+      />
       
       {/* Animated blobs - more subtle blue/purple like reference */}
       <div className="blob blob-1 -top-32 -left-32" />
