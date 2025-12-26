@@ -123,42 +123,42 @@
     background: hsl(var(--blob-1));
     width: 600px;
     height: 600px;
-    animation: blob-float-1 25s ease-in-out infinite;
+    animation: blob-float-1 8s ease-in-out infinite;
   }
 
   .blob-2 {
     background: hsl(var(--blob-2));
     width: 500px;
     height: 500px;
-    animation: blob-float-2 30s ease-in-out infinite;
+    animation: blob-float-2 10s ease-in-out infinite;
   }
 
   .blob-3 {
     background: hsl(var(--blob-3));
     width: 450px;
     height: 450px;
-    animation: blob-float-3 28s ease-in-out infinite;
+    animation: blob-float-3 9s ease-in-out infinite;
   }
 
   .blob-4 {
     background: hsl(var(--blob-4));
     width: 550px;
     height: 550px;
-    animation: blob-float-4 32s ease-in-out infinite;
+    animation: blob-float-4 11s ease-in-out infinite;
   }
 
   .blob-5 {
     background: hsl(var(--blob-5));
     width: 400px;
     height: 400px;
-    animation: blob-float-5 26s ease-in-out infinite;
+    animation: blob-float-5 7s ease-in-out infinite;
   }
 
   .blob-6 {
     background: hsl(var(--blob-6));
     width: 480px;
     height: 480px;
-    animation: blob-float-6 35s ease-in-out infinite;
+    animation: blob-float-6 12s ease-in-out infinite;
   }
 }
 
