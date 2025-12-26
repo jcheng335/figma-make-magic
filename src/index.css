@@ -34,13 +34,13 @@
 
     --radius: 0.75rem;
 
-    /* Blob gradient colors - pastel green & teal/aqua with #72a6a2 */
-    --blob-1: 175 25% 55%;
-    --blob-2: 175 55% 82%;
-    --blob-3: 165 40% 88%;
-    --blob-4: 180 30% 65%;
-    --blob-5: 170 45% 86%;
-    --blob-6: 178 35% 60%;
+    /* Blob gradient colors - blue/purple/pink like Lovable */
+    --blob-1: 220 70% 85%;
+    --blob-2: 260 65% 82%;
+    --blob-3: 340 70% 88%;
+    --blob-4: 200 60% 80%;
+    --blob-5: 280 55% 86%;
+    --blob-6: 20 70% 85%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
