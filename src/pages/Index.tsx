@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Pen, Sparkles, RefreshCw, BookMarked, Search, Mic, ScanLine, ChevronUp } from "lucide-react";
+import { BookOpen, Pen, Sparkles, RefreshCw, BookMarked, Search, Mic, ScanLine } from "lucide-react";
 import { motion } from "framer-motion";
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -338,10 +338,9 @@ const Index = () => {
 const NavButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <a 
     href={href} 
-    className="group relative flex items-center gap-1 px-4 py-2 text-foreground font-medium rounded-full border border-transparent hover:border-border/60 hover:bg-background/60 transition-all duration-300"
+    className="px-4 py-2 text-foreground rounded-full border border-transparent hover:border-border/60 hover:bg-background/60 transition-all duration-300"
   >
-    <span>{children}</span>
-    <ChevronUp className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
+    {children}
   </a>
 );
 
