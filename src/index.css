@@ -34,13 +34,13 @@
 
     --radius: 0.75rem;
 
-    /* Blob gradient colors - pastel green & teal/aqua palette */
-    --blob-1: 160 50% 85%;
+    /* Blob gradient colors - pastel green & teal/aqua with #72a6a2 */
+    --blob-1: 175 25% 55%;
     --blob-2: 175 55% 82%;
-    --blob-3: 140 40% 88%;
-    --blob-4: 185 60% 80%;
-    --blob-5: 165 45% 86%;
-    --blob-6: 195 50% 83%;
+    --blob-3: 165 40% 88%;
+    --blob-4: 180 30% 65%;
+    --blob-5: 170 45% 86%;
+    --blob-6: 178 35% 60%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
