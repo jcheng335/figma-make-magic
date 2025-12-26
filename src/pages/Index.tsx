@@ -35,11 +35,18 @@ const Index = () => {
       <AnimatedBackground />
       
       {/* Navigation */}
-      <nav className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-700 ease-out ${
-        scrolled 
-          ? "bg-background/50 backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.2)]" 
-          : "bg-transparent backdrop-blur-none"
-      }`}>
+      <nav 
+        className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-700 ease-out ${
+          scrolled 
+            ? "backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.2)]" 
+            : "backdrop-blur-none"
+        }`}
+        style={{
+          background: scrolled 
+            ? "linear-gradient(to bottom, hsl(var(--background) / 0.6) 0%, hsl(var(--background) / 0.4) 60%, transparent 100%)"
+            : "transparent"
+        }}
+      >
         <div className="flex items-center gap-2">
           <BookMarked className="w-6 h-6 text-primary" />
           <span className="font-semibold text-lg">ZoeNote</span>
