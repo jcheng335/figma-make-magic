@@ -81,11 +81,11 @@ const Index = () => {
         </motion.div>
       </motion.section>
 
-      {/* Gradient fade-out overlay - very gradual fade like reference */}
+      {/* Gradient fade-out overlay - starts after buttons, very gradual */}
       <div 
-        className="absolute left-0 right-0 top-[50vh] h-[80vh] z-[5] pointer-events-none"
+        className="absolute left-0 right-0 top-[80vh] h-[120vh] z-[5] pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.02) 10%, hsl(var(--background) / 0.05) 20%, hsl(var(--background) / 0.1) 30%, hsl(var(--background) / 0.2) 40%, hsl(var(--background) / 0.35) 50%, hsl(var(--background) / 0.55) 60%, hsl(var(--background) / 0.75) 70%, hsl(var(--background) / 0.9) 80%, hsl(var(--background)) 90%)'
+          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.01) 5%, hsl(var(--background) / 0.02) 10%, hsl(var(--background) / 0.04) 15%, hsl(var(--background) / 0.06) 20%, hsl(var(--background) / 0.09) 25%, hsl(var(--background) / 0.13) 30%, hsl(var(--background) / 0.18) 35%, hsl(var(--background) / 0.24) 40%, hsl(var(--background) / 0.32) 45%, hsl(var(--background) / 0.42) 50%, hsl(var(--background) / 0.54) 55%, hsl(var(--background) / 0.66) 60%, hsl(var(--background) / 0.78) 65%, hsl(var(--background) / 0.88) 70%, hsl(var(--background) / 0.95) 75%, hsl(var(--background)) 80%)'
         }}
       />
       
