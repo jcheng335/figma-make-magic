@@ -12,13 +12,13 @@ const AnimatedBackground = () => {
       <div className="blob blob-5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
       <div className="blob blob-6 top-10 left-1/3" />
       
-      {/* Tight grid overlay - subtle green tint */}
+      {/* Tight grid overlay - subtle teal tint */}
       <div 
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(to right, hsl(150 50% 60% / 0.12) 1px, transparent 1px),
-            linear-gradient(to bottom, hsl(150 50% 60% / 0.12) 1px, transparent 1px)
+            linear-gradient(to right, hsl(175 45% 65% / 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, hsl(175 45% 65% / 0.1) 1px, transparent 1px)
           `,
           backgroundSize: '20px 20px',
         }}
