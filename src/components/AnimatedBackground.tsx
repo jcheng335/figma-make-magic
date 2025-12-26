@@ -34,11 +34,11 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Top fade overlay - sits on top of everything for smooth blend */}
+      {/* Top fade overlay - minimal, just enough to keep nav clean */}
       <div 
-        className="absolute inset-x-0 top-0 h-64 z-20"
+        className="absolute inset-x-0 top-0 h-20 z-20"
         style={{
-          background: "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background)) 30%, hsl(var(--background) / 0.9) 50%, hsl(var(--background) / 0.6) 70%, hsl(var(--background) / 0.2) 90%, transparent 100%)",
+          background: "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 40%, transparent 100%)",
         }}
       />
     </div>
