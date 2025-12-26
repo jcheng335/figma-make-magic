@@ -108,8 +108,20 @@ const Index = () => {
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <Button size="lg" className="px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">Get Started</Button>
-          <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg">Learn More</Button>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <Button size="lg" className="px-8 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-shadow duration-300">Get Started</Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ type: "spring", stiffness: 400, damping: 17 }}
+          >
+            <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm hover:shadow-lg transition-shadow duration-300">Learn More</Button>
+          </motion.div>
         </motion.div>
       </motion.section>
       
