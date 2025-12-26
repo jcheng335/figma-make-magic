@@ -43,11 +43,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Gradient fade-out overlay - slow tapered fade */}
+      {/* Gradient fade-out overlay - very gradual fade like reference */}
       <div 
-        className="absolute left-0 right-0 top-[75vh] h-[50vh] z-[5] pointer-events-none"
+        className="absolute left-0 right-0 top-[50vh] h-[80vh] z-[5] pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.1) 20%, hsl(var(--background) / 0.3) 40%, hsl(var(--background) / 0.6) 60%, hsl(var(--background) / 0.85) 80%, hsl(var(--background)) 100%)'
+          background: 'linear-gradient(to bottom, transparent 0%, hsl(var(--background) / 0.02) 10%, hsl(var(--background) / 0.05) 20%, hsl(var(--background) / 0.1) 30%, hsl(var(--background) / 0.2) 40%, hsl(var(--background) / 0.35) 50%, hsl(var(--background) / 0.55) 60%, hsl(var(--background) / 0.75) 70%, hsl(var(--background) / 0.9) 80%, hsl(var(--background)) 90%)'
         }}
       />
       
