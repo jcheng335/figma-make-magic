@@ -34,13 +34,13 @@
 
     --radius: 0.75rem;
 
-    /* Blob gradient colors */
-    --blob-1: 220 90% 75%;
-    --blob-2: 280 85% 75%;
-    --blob-3: 340 80% 80%;
-    --blob-4: 160 75% 70%;
-    --blob-5: 45 85% 75%;
-    --blob-6: 200 85% 70%;
+    /* Blob gradient colors - soft blue/purple palette */
+    --blob-1: 230 70% 82%;
+    --blob-2: 250 65% 80%;
+    --blob-3: 220 60% 85%;
+    --blob-4: 240 55% 78%;
+    --blob-5: 260 50% 82%;
+    --blob-6: 210 65% 80%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
