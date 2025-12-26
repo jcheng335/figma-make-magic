@@ -38,13 +38,14 @@ const Index = () => {
       <nav 
         className={`sticky top-0 z-50 flex items-center justify-between px-6 md:px-12 py-4 transition-all duration-700 ease-out ${
           scrolled 
-            ? "backdrop-blur-2xl shadow-[0_1px_0_0_hsl(var(--border)/0.2)]" 
+            ? "backdrop-blur-2xl" 
             : "backdrop-blur-none"
         }`}
         style={{
+          // Always fade to transparent at the bottom so the animated background stays visible
           background: scrolled 
-            ? "linear-gradient(to bottom, hsl(var(--background) / 0.6) 0%, hsl(var(--background) / 0.4) 60%, transparent 100%)"
-            : "linear-gradient(to bottom, hsl(var(--background) / 0.3) 0%, hsl(var(--background) / 0.15) 50%, transparent 100%)"
+            ? "linear-gradient(to bottom, hsl(var(--background) / 0.28) 0%, hsl(var(--background) / 0.14) 65%, transparent 100%)"
+            : "linear-gradient(to bottom, hsl(var(--background) / 0.05) 0%, hsl(var(--background) / 0.02) 55%, transparent 100%)"
         }}
       >
         <div className="flex items-center gap-2">
@@ -70,13 +71,6 @@ const Index = () => {
         animate="visible"
         variants={staggerContainer}
       >
-        {/* Top bar wash (subtle fade to white like reference) */}
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-28"
-          style={{
-            background: "linear-gradient(to bottom, hsl(var(--background)), transparent)",
-          }}
-        />
 
         {/* Bottom fade (starts under buttons and tapers to white) */}
         <div

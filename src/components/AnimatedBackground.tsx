@@ -21,8 +21,9 @@ const AnimatedBackground = () => {
             linear-gradient(to bottom, hsl(0 0% 100% / 0.15) 1px, transparent 1px)
           `,
           backgroundSize: '20px 20px',
-          maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 60px, black 200px)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 60px, black 200px)',
+          // Start the grid fade *below* the nav to avoid a visible seam at the nav edge
+          maskImage: 'linear-gradient(to bottom, transparent 0%, transparent 110px, black 300px)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, transparent 110px, black 300px)',
         }}
       />
       
@@ -34,11 +35,11 @@ const AnimatedBackground = () => {
         }}
       />
       
-      {/* Top fade overlay - minimal, just enough to keep nav clean */}
+      {/* Top fade overlay - ultra subtle (avoid visible edge lines) */}
       <div 
-        className="absolute inset-x-0 top-0 h-20 z-20"
+        className="absolute inset-x-0 top-0 h-28 z-20"
         style={{
-          background: "linear-gradient(to bottom, hsl(var(--background)) 0%, hsl(var(--background) / 0.7) 40%, transparent 100%)",
+          background: "linear-gradient(to bottom, hsl(var(--background) / 0.10) 0%, hsl(var(--background) / 0.05) 45%, transparent 100%)",
         }}
       />
     </div>
