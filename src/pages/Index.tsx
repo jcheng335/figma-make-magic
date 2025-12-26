@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import AnimatedBackground from "@/components/AnimatedBackground";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Pen, Sparkles, RefreshCw, BookMarked, Search, Mic, ScanLine } from "lucide-react";
+import { BookOpen, Pen, Sparkles, RefreshCw, BookMarked, Search, Mic, ScanLine, ChevronUp } from "lucide-react";
 import { motion } from "framer-motion";
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0 }
@@ -52,11 +51,11 @@ const Index = () => {
           <BookMarked className="w-6 h-6 text-primary" />
           <span className="font-semibold text-lg">ZoeNote</span>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors">AI Features</a>
-          <a href="#showcase" className="hover:text-foreground transition-colors">Showcase</a>
-          <a href="#" className="hover:text-foreground transition-colors">Verse Search</a>
-          <a href="#pricing" className="hover:text-foreground transition-colors">Pricing</a>
+        <div className="hidden md:flex items-center gap-2 text-sm">
+          <NavButton href="#features">AI Features</NavButton>
+          <NavButton href="#showcase">Showcase</NavButton>
+          <NavButton href="#">Verse Search</NavButton>
+          <NavButton href="#pricing">Pricing</NavButton>
         </div>
         <div className="flex items-center gap-3">
           <Button variant="ghost" size="sm">Sign In</Button>
@@ -335,6 +334,16 @@ const Index = () => {
     </div>
   );
 };
+
+const NavButton = ({ href, children }: { href: string; children: React.ReactNode }) => (
+  <a 
+    href={href} 
+    className="group relative flex items-center gap-1 px-4 py-2 text-foreground font-medium rounded-full border border-transparent hover:border-border/60 hover:bg-background/60 transition-all duration-300"
+  >
+    <span>{children}</span>
+    <ChevronUp className="w-3.5 h-3.5 opacity-0 -translate-y-0.5 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />
+  </a>
+);
 
 const FeatureCard = ({ icon, title, description, index }: { icon: React.ReactNode; title: string; description: string; index: number }) => (
   <motion.div 
