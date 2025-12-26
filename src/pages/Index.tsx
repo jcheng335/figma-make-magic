@@ -108,8 +108,8 @@ const Index = () => {
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <Button size="lg" className="px-8">Get Started</Button>
-          <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm">Learn More</Button>
+          <Button size="lg" className="px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/25">Get Started</Button>
+          <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm transition-all duration-300 hover:scale-105 hover:shadow-lg">Learn More</Button>
         </motion.div>
       </motion.section>
       
