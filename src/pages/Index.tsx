@@ -43,116 +43,122 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="relative z-10 py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">Features</p>
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-16" style={{ fontFamily: 'Georgia, serif' }}>
-            Everything you need
-          </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 -mt-12">
-            Powerful features designed to help you study deeper, organize better, and grow spiritually.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard
-              icon={<BookOpen className="w-6 h-6" />}
-              title="Organized Notebooks"
-              description="Create unlimited notebooks and organize your Bible study notes with an intuitive folder structure."
-            />
-            <FeatureCard
-              icon={<Pen className="w-6 h-6" />}
-              title="Rich Editing"
-              description="Write with a beautiful editor that supports markdown, formatting, and seamless Scripture embedding."
-            />
-            <FeatureCard
-              icon={<Sparkles className="w-6 h-6" />}
-              title="AI-Powered Features"
-              description="Auto-populate verses, OCR capture, smart search, and transcription to enhance your study."
-            />
-            <FeatureCard
-              icon={<RefreshCw className="w-6 h-6" />}
-              title="Multi-Platform Sync"
-              description="Access your notes anywhere with seamless sync across all your devices."
-            />
+      {/* Gradient fade-out overlay */}
+      <div className="absolute left-0 right-0 top-[85vh] h-48 bg-gradient-to-b from-transparent via-background/70 to-background z-[5] pointer-events-none" />
+      
+      {/* Clean white background for rest of page */}
+      <div className="relative bg-background z-10">
+        {/* Features Section */}
+        <section id="features" className="py-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">Features</p>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-16" style={{ fontFamily: 'Georgia, serif' }}>
+              Everything you need
+            </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16 -mt-12">
+              Powerful features designed to help you study deeper, organize better, and grow spiritually.
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <FeatureCard
+                icon={<BookOpen className="w-6 h-6" />}
+                title="Organized Notebooks"
+                description="Create unlimited notebooks and organize your Bible study notes with an intuitive folder structure."
+              />
+              <FeatureCard
+                icon={<Pen className="w-6 h-6" />}
+                title="Rich Editing"
+                description="Write with a beautiful editor that supports markdown, formatting, and seamless Scripture embedding."
+              />
+              <FeatureCard
+                icon={<Sparkles className="w-6 h-6" />}
+                title="AI-Powered Features"
+                description="Auto-populate verses, OCR capture, smart search, and transcription to enhance your study."
+              />
+              <FeatureCard
+                icon={<RefreshCw className="w-6 h-6" />}
+                title="Multi-Platform Sync"
+                description="Access your notes anywhere with seamless sync across all your devices."
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Showcase Section */}
-      <section id="showcase" className="relative z-10 py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">See It In Action</p>
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-            A workspace that inspires deeper study
-          </h2>
-          <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-            Watch how ZoeNote auto-populates Scripture verses, adds inline comments, and captures your insights—all in one seamless experience.
-          </p>
-          
-          <div className="bg-background/60 backdrop-blur-md rounded-2xl border border-border/50 p-8 shadow-xl">
-            <div className="aspect-video bg-gradient-to-br from-muted/50 to-muted rounded-lg flex items-center justify-center">
-              <div className="text-center text-muted-foreground">
-                <BookMarked className="w-16 h-16 mx-auto mb-4 opacity-50" />
-                <p className="text-sm">App Preview</p>
+        {/* Showcase Section */}
+        <section id="showcase" className="py-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">See It In Action</p>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+              A workspace that inspires deeper study
+            </h2>
+            <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+              Watch how ZoeNote auto-populates Scripture verses, adds inline comments, and captures your insights—all in one seamless experience.
+            </p>
+            
+            <div className="bg-muted/30 rounded-2xl border border-border/50 p-8 shadow-xl">
+              <div className="aspect-video bg-gradient-to-br from-muted/50 to-muted rounded-lg flex items-center justify-center">
+                <div className="text-center text-muted-foreground">
+                  <BookMarked className="w-16 h-16 mx-auto mb-4 opacity-50" />
+                  <p className="text-sm">App Preview</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* AI Features Section */}
-      <section className="relative z-10 py-24 px-4">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">AI-Powered</p>
-          <h2 className="text-3xl md:text-4xl font-light text-center mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-            Smart features for deeper study
-          </h2>
-          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-16">
-            OCR capture turns printed or handwritten notes into text. AI transcription records meetings. 
-            Smart search finds notes by semantics, not just keywords. Auto-populate verses from Recovery Version, ESV, or KJV.
-          </p>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            <AIFeatureCard icon={<ScanLine className="w-5 h-5" />} title="OCR Capture" />
-            <AIFeatureCard icon={<Mic className="w-5 h-5" />} title="AI Transcription" />
-            <AIFeatureCard icon={<Search className="w-5 h-5" />} title="Smart Search" />
-            <AIFeatureCard icon={<BookOpen className="w-5 h-5" />} title="Auto-Populate Verses" />
+        {/* AI Features Section */}
+        <section className="py-24 px-4">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase text-center mb-3">AI-Powered</p>
+            <h2 className="text-3xl md:text-4xl font-light text-center mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+              Smart features for deeper study
+            </h2>
+            <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-16">
+              OCR capture turns printed or handwritten notes into text. AI transcription records meetings. 
+              Smart search finds notes by semantics, not just keywords. Auto-populate verses from Recovery Version, ESV, or KJV.
+            </p>
+            
+            <div className="grid md:grid-cols-4 gap-6">
+              <AIFeatureCard icon={<ScanLine className="w-5 h-5" />} title="OCR Capture" />
+              <AIFeatureCard icon={<Mic className="w-5 h-5" />} title="AI Transcription" />
+              <AIFeatureCard icon={<Search className="w-5 h-5" />} title="Smart Search" />
+              <AIFeatureCard icon={<BookOpen className="w-5 h-5" />} title="Auto-Populate Verses" />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section id="pricing" className="relative z-10 py-24 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-3">Start Today</p>
-          <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ fontFamily: 'Georgia, serif' }}>
-            Begin your study journey
-          </h2>
-          <p className="text-muted-foreground mb-10">
-            Join thousands of believers who have found their perfect Bible study workspace with ZoeNote.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" className="px-8">Get Started Free</Button>
-            <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm">View Pricing</Button>
+        {/* CTA Section */}
+        <section id="pricing" className="py-24 px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-sm tracking-[0.2em] text-muted-foreground uppercase mb-3">Start Today</p>
+            <h2 className="text-3xl md:text-4xl font-light mb-6" style={{ fontFamily: 'Georgia, serif' }}>
+              Begin your study journey
+            </h2>
+            <p className="text-muted-foreground mb-10">
+              Join thousands of believers who have found their perfect Bible study workspace with ZoeNote.
+            </p>
+            <div className="flex gap-4 justify-center">
+              <Button size="lg" className="px-8">Get Started Free</Button>
+              <Button size="lg" variant="outline" className="px-8">View Pricing</Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Footer */}
-      <footer className="relative z-10 py-8 px-4 border-t border-border/30">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <div className="flex items-center gap-2">
-            <BookMarked className="w-4 h-4" />
-            <span>© 2025 ZoeNote. All rights reserved.</span>
+        {/* Footer */}
+        <footer className="py-8 px-4 border-t border-border/30">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <BookMarked className="w-4 h-4" />
+              <span>© 2025 ZoeNote. All rights reserved.</span>
+            </div>
+            <div className="flex gap-6">
+              <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
+              <a href="#" className="hover:text-foreground transition-colors">Terms</a>
+              <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+            </div>
           </div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-            <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-            <a href="#" className="hover:text-foreground transition-colors">Contact</a>
-          </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 };
