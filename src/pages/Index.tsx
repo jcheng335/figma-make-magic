@@ -44,7 +44,7 @@ const Index = () => {
         style={{
           background: scrolled 
             ? "linear-gradient(to bottom, hsl(var(--background) / 0.6) 0%, hsl(var(--background) / 0.4) 60%, transparent 100%)"
-            : "transparent"
+            : "linear-gradient(to bottom, hsl(var(--background) / 0.3) 0%, hsl(var(--background) / 0.15) 50%, transparent 100%)"
         }}
       >
         <div className="flex items-center gap-2">
