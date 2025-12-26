@@ -65,13 +65,18 @@ const Index = () => {
 
       {/* Hero Section */}
       <motion.section 
-        className="relative z-10 flex flex-col items-center justify-center min-h-[85vh] px-4 text-center overflow-hidden"
+        className="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-6 text-center pt-24"
         initial="hidden"
         animate="visible"
-        variants={staggerContainer}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.2 }
+          }
+        }}
       >
-
-        {/* Bottom fade (starts under buttons and tapers to white) */}
+        {/* Bottom fade */}
         <div
           className="pointer-events-none absolute inset-x-0 bottom-0 h-[32vh]"
           style={{
@@ -80,37 +85,39 @@ const Index = () => {
           }}
         />
 
-        <motion.p 
-          className="relative z-10 text-sm tracking-[0.3em] text-muted-foreground uppercase mb-4"
+        <motion.h1
           variants={fadeInUp}
           transition={{ duration: 0.6 }}
+          className="relative z-10 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground max-w-4xl leading-tight tracking-tight"
         >
-          Modern Workspace
-        </motion.p>
-        <motion.h1 
-          className="relative z-10 text-6xl md:text-8xl font-light tracking-tight text-foreground mb-6" 
-          style={{ fontFamily: 'Georgia, serif' }}
+          Study Scripture with a workspace that understands it.
+        </motion.h1>
+
+        <motion.p
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.1 }}
+          className="relative z-10 mt-8 text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed"
         >
-          ZoeNote
-        </motion.h1>
-        <motion.p 
-          className="relative z-10 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed"
+          Spend less time finding scripture references and more time in the Word. With ZoeNote, you can automatically populate scripture references from outlines, notes and scans with a click of a button or as you type. Organize your scripture notes into one intuitive notebook workplace and retrieve notes with AI-powered semantic search.
+        </motion.p>
+
+        <motion.div
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="relative z-10 mt-10"
         >
-          A beautiful, intuitive notebook workspace designed for creative minds. 
-          Capture your thoughts, organize your ideas, and bring your projects to life.
-        </motion.p>
-        <motion.div 
-          className="relative z-10 flex gap-4"
+          <Button size="lg" className="text-lg px-10 py-6 rounded-full shadow-lg hover:shadow-xl transition-shadow bg-foreground text-background hover:bg-foreground/90">
+            Get ZoeNote Free
+          </Button>
+        </motion.div>
+
+        <motion.p
           variants={fadeInUp}
           transition={{ duration: 0.6, delay: 0.3 }}
+          className="relative z-10 mt-6 text-muted-foreground"
         >
-          <Button size="lg" className="px-8">Get Started</Button>
-          <Button size="lg" variant="outline" className="px-8 bg-background/50 backdrop-blur-sm">Learn More</Button>
-        </motion.div>
+          Already have an account? <a href="#" className="underline underline-offset-4 hover:text-foreground transition-colors">Log in</a>
+        </motion.p>
       </motion.section>
       
       {/* Clean white background for rest of page */}
